@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HeaderContainer } from './HeaderStyles';
 
-function Header() {
+function Header({ onDarkMode }) {
   return (
-    <header>
-      <h1>brianpena.dev</h1>
+    <HeaderContainer>
+      <h1 onClick={() => onDarkMode((darkMode) => !darkMode)}>brianpena.dev</h1>
       <nav>
         <ul>
           <li><Link to="/">Home</Link></li>
@@ -14,7 +15,7 @@ function Header() {
           <li><Link to="/resume">Resume/CV</Link></li>
         </ul>
       </nav>
-    </header>
+    </HeaderContainer>
   );
 }
 
