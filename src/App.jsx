@@ -3,24 +3,32 @@ import { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 import About from './pages/About';
-import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
-import { darkTheme, lightTheme } from './theme';
+import { darkTheme, lightTheme, GlobalStyles } from './theme';
+import useDarkMode from './hooks/useDarkMode';
+import Work from './pages/Work/Work';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true)
+  const [theme, toggleTheme, componentMounted] = useDarkMode();
+
+  if (!componentMounted) {
+    return <div />;
+  }
+
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+    <ThemeProvider theme={themeMode}>
+      <GlobalStyles />
       <Router>
         <div>
-          <Header onDarkMode={setDarkMode} />
+          <Header theme={theme} onToggleTheme={toggleTheme} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/work" element={<Work />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="*" element={<Navigate to="/" />} />

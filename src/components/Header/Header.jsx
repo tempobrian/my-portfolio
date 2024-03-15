@@ -1,22 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { HeaderContainer } from './HeaderStyles';
+import { NavLink } from 'react-router-dom';
+import { HeaderContainer, Logo, Nav, ThemeSwitcher } from './Header.styles';
+import { Moon, Sun } from '@styled-icons/fa-solid';
+import Typography from '../Typography/Typography';
 
-function Header({ onDarkMode }) {
+const Header = ({ onToggleTheme, theme }) => {
   return (
     <HeaderContainer>
-      <h1 onClick={() => onDarkMode((darkMode) => !darkMode)}>brianpena.dev</h1>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/portfolio">Portfolio</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-          <li><Link to="/resume">Resume/CV</Link></li>
-        </ul>
-      </nav>
+      <Logo to="/">brianpena.dev</Logo>
+      <Nav>
+        <NavLink to="/"><Typography>Home</Typography></NavLink>
+        <NavLink to="/work"><Typography>Work</Typography></NavLink>
+        <NavLink to="/about"><Typography>About</Typography></NavLink>
+        <NavLink to="/contact"><Typography>Contact</Typography></NavLink>
+      </Nav>
+      <ThemeSwitcher onClick={onToggleTheme}>
+        {theme === 'light' ? <Moon size="24" /> : <Sun size="24" />}
+      </ThemeSwitcher>
     </HeaderContainer>
   );
-}
+};
 
 export default Header;
