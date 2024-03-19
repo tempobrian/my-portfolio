@@ -1,29 +1,46 @@
 import { createGlobalStyle } from 'styled-components';
+const generalConfig = {
+  screens: {
+    sm: '350px',
+    md: '768px',
+    lg: '1200px',
+  }
+
+}
 
 export const lightTheme = {
-  body: '#FFFFFF', // Light background
-  text: '#101418', // Dark text
-  headerBackground: '#FFFFFF', // Slightly off-white background for header
-  primary: '#006fdd', // Accent color for buttons and icons
-  secondary: '#303740', // Secondary color for miscellaneous elements
-  accent: '#9C27B0', // For hover states and accents
-  buttonText: '#FFFFFF', // Black text on buttons for readability
-  accentHover: '#BA68C8', // A lighter purple for hover states on accents
-  itemBackground: '#EEEEEE', // Background for portfolio items or cards
-  boxShadow: '#e5eaf2'
+  colors: {
+    body: '#FFFFFF', // Light background
+    text: '#101418', // Dark text
+    headerBackground: '#FFFFFF', // Slightly lighter background for header
+    primary: '#006fdd', // Accent color for buttons and icons
+    secondary: '#303740', // Secondary color for miscellaneous elements
+    accent: '#9C27B0', // For hover states and accents
+    buttonText: '#FFFFFF',
+    accentHover: '#BA68C8', // A lighter purple for hover states on accents
+    itemBackground: '#EEEEEE', // Background for portfolio items or cards
+    boxShadow: '#e5eaf2',
+    accentBackground: 'linear-gradient(180deg, #FFF 0%, #ebf5ff 100%)'
+  },
+  ...generalConfig
+
 };
 
 export const darkTheme = {
-  body: '#101418', // Dark background
-  text: '#E8E8E8', // Light text
-  headerBackground: '#101418', // Slightly lighter background for header
-  primary: '#3399ff', // Accent color for buttons and icons
-  secondary: '#aebacb', // Secondary color for miscellaneous elements
-  accent: '#4CAF50', // For hover states and accents
-  buttonText: '#FFFFFF', // White text on buttons for readability
-  accentHover: '#66BB6A', // A lighter green for hover states on accents
-  itemBackground: '#333333', // Background for portfolio items or cards
-  boxShadow: '#1f262e'
+  colors: {
+    body: '#101418', // Dark background
+    text: '#E8E8E8', // Light text
+    headerBackground: '#101418', // Slightly off-white background for header 
+    primary: '#3399ff', // Accent color for buttons and icons
+    secondary: '#aebacb', // Secondary color for miscellaneous elements
+    accent: '#4CAF50', // For hover states and accents
+    buttonText: '#FFFFFF', // White text on buttons for readability
+    accentHover: '#66BB6A', // A lighter green for hover states on accents
+    itemBackground: '#333333', // Background for portfolio items or cards
+    boxShadow: '#1f262e',
+    accentBackground: 'linear-gradient(180deg, #101418 0%, #0f2639 100%)'
+  },
+  ...generalConfig
 };
 
 export const GlobalStyles = createGlobalStyle`
