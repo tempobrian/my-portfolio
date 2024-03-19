@@ -16,7 +16,7 @@ export const sizeVariants = {
 };
 
 export const Button = styled.button`
-  background-color: ${(props) => props.theme.primary};
+  background-color: ${(props) => props.theme.colors[props.color]};
   color: white;
   border: none;
   border-radius: 5px;
@@ -26,12 +26,12 @@ export const Button = styled.button`
   ${(props) => sizeVariants[props.size || 'medium']}
 
   &:hover {
-    background-color: ${(props) => props.theme.secondary};
+    background-color: ${(props) => props.theme.colors.secondary};
     transform: scale(1.05);
   }
 
   &:focus {
-    outline: 3px solid ${(props) => props.theme.secondary};
+    outline: 3px solid ${(props) => props.theme.colors.secondary};
     outline-offset: 2px;
   }
 `;
