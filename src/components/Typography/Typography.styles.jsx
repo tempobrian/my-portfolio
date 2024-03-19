@@ -1,13 +1,14 @@
 import styled, { css } from 'styled-components';
 
 export const Text = styled.span`
-  ${({ as, highlight, theme, fontWeight }) => css`
+  ${({ variant, color, theme, fontWeight, gradient }) => css`
     ${(() => {
-      switch (as) {
+      switch (variant) {
         case 'h1':
           return css`
             font-size: 2.5rem;
             font-weight: ${fontWeight || 'bold'};
+            
           `;
         case 'h2':
           return css`
@@ -38,7 +39,6 @@ export const Text = styled.span`
           return css`
             font-size: 1rem;
             font-weight: ${fontWeight || 'normal'};
-            margin-bottom: 1rem;
           `;
         case 'button':
           return css`
@@ -59,10 +59,20 @@ export const Text = styled.span`
           `;
       }
     })()}
+    
+    line-height: 1.2;
+    color: ${gradient ? 'transparent' : theme.colors[color]};
+    ${gradient &&
+    css`
+      background: linear-gradient(
+        90deg,
+        #3399ff 5%,
+        #0073e6 90%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      `}
 
-    // Highlight text if highlight prop is true
-    color: ${highlight ? theme.primary : 'inherit'};
-
-  `}
-  margin-bottom: ${({ gutterBottom }) => (gutterBottom ? '0.35em' : '0')};
+`}
+margin-bottom: ${({ noGutterBottom }) => (noGutterBottom ? '0' : '2rem')};
 `;

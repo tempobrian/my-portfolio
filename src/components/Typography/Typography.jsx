@@ -1,15 +1,6 @@
 import React from 'react';
 import { Text } from './Typography.styles';
 
-const Typography = ({ variant = 'body1', highlight, children, ...props }) => {
-  return (
-    <Text as={variantMap[variant]} highlight={highlight} {...props}>
-      {children}
-    </Text>
-  );
-};
-
-// Mapping MUI variant styles to HTML elements and additional styling
 const variantMap = {
   h1: 'h1',
   h2: 'h2',
@@ -19,11 +10,22 @@ const variantMap = {
   h6: 'h6',
   subtitle1: 'h6',
   subtitle2: 'h6',
-  body1: 'p',
-  body2: 'p',
+  body: 'p',
   button: 'button',
   caption: 'span',
   overline: 'span',
 };
+
+const Typography = ({ variant = 'body', color = "text", children, ...props }) => {
+  const Component = variantMap[variant] || 'span';
+  return (
+    <Text as={Component} variant={Component} color={color} {...props}>
+      {children}
+    </Text>
+  );
+};
+
+// Mapping MUI variant styles to HTML elements and additional styling
+
 
 export default Typography;
