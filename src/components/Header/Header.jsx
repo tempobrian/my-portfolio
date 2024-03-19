@@ -9,10 +9,10 @@ const Header = ({ onToggleTheme, theme }) => {
     <HeaderContainer>
       <Logo to="/">brianpena.dev</Logo>
       <Nav>
-        <NavLink to="/"><Typography>Home</Typography></NavLink>
-        <NavLink to="/work"><Typography>Work</Typography></NavLink>
-        <NavLink to="/about"><Typography>About</Typography></NavLink>
-        <NavLink to="/contact"><Typography>Contact</Typography></NavLink>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/work">Work</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </Nav>
       <ThemeSwitcher onClick={onToggleTheme}>
         {theme === 'light' ? <Moon size="24" /> : <Sun size="24" />}
