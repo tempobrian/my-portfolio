@@ -13,7 +13,7 @@ export const HomeContainer = styled.section`
 export const Title = styled.h1`
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: ${(props) => props.theme.primary};
+  color: ${(props) => props.theme.colors.primary};
 `;
 
 export const Subtitle = styled.p`

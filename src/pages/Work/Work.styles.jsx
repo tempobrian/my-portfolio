@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const WorkContainer = styled.section`
   padding: 4rem;
   text-align: center;
-  background: ${(props) => props.theme.body};
-  color: ${(props) => props.theme.text};
+  background: ${(props) => props.theme.colors.body};
+  color: ${(props) => props.theme.colors.text};
 `;
 
 export const PortfolioGrid = styled.div`
@@ -15,7 +15,7 @@ export const PortfolioGrid = styled.div`
 `;
 
 export const PortfolioItem = styled.div`
-  background: ${(props) => props.theme.itemBackground};
+  background: ${(props) => props.theme.colors.itemBackground};
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
