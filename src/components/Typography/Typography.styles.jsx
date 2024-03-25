@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components';
+import { lighten, darken } from 'polished';
 
 export const Text = styled.span`
-  ${({ variant, color, theme, fontWeight, gradient }) => css`
+  ${({ $variant, color, theme, fontWeight, $gradient }) => css`
     ${(() => {
-      switch (variant) {
+      switch ($variant) {
         case 'h1':
           return css`
             font-size: 2.5rem;
@@ -61,13 +62,13 @@ export const Text = styled.span`
     })()}
     
     line-height: 1.2;
-    color: ${gradient ? 'transparent' : theme.colors[color]};
-    ${gradient &&
+    color: ${$gradient ? 'transparent' : theme.colors[color]};
+    ${$gradient &&
     css`
       background: linear-gradient(
         90deg,
-        #3399ff 5%,
-        #0073e6 90%
+        ${(props) => lighten(0.16, props.theme.colors.primary)} 5%,
+        ${(props) => darken(0.16, props.theme.colors.primary)} 80%
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

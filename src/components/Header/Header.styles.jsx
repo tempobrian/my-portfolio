@@ -2,13 +2,10 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const HeaderContainer = styled.header`
-  background: ${(props) => props.theme.colors.headerBackground};
+  background: ${(props) => props.theme.colors.body};
   color: ${(props) => props.theme.colors.text};
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   box-shadow: inset 0 0 1px ${(props) => props.theme.colors.secondary};
+  padding: 20px 0;
 `;
 
 export const Logo = styled(Link)`
@@ -18,8 +15,6 @@ export const Logo = styled(Link)`
 `;
 
 export const Nav = styled.nav`
-  display: flex;
-  gap: 1rem;
 
   a {
     color: ${(props) => props.theme.colors.text};

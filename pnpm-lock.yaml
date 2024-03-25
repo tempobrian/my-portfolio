@@ -8,6 +8,12 @@ dependencies:
   '@styled-icons/fa-solid':
     specifier: ^10.47.0
     version: 10.47.0(react@18.2.0)(styled-components@6.1.8)
+  '@styled-icons/simple-icons':
+    specifier: ^10.46.0
+    version: 10.46.0(react@18.2.0)(styled-components@6.1.8)
+  polished:
+    specifier: ^4.3.1
+    version: 4.3.1
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -471,6 +477,18 @@ packages:
 
   /@styled-icons/fa-solid@10.47.0(react@18.2.0)(styled-components@6.1.8):
     resolution: {integrity: sha512-8AJjbOAkvPlB/ypFzWo++CZxRDlFQfvWQSjWzVU/v/4kjGRWIiVB+rJrTB7joDUd5Oas/se4cSiDkSA+XR/Fqg==}
+    peerDependencies:
+      react: '*'
+      styled-components: '*'
+    dependencies:
+      '@babel/runtime': 7.24.0
+      '@styled-icons/styled-icon': 10.7.0(react@18.2.0)(styled-components@6.1.8)
+      react: 18.2.0
+      styled-components: 6.1.8(react-dom@18.2.0)(react@18.2.0)
+    dev: false
+
+  /@styled-icons/simple-icons@10.46.0(react@18.2.0)(styled-components@6.1.8):
+    resolution: {integrity: sha512-zHkbGqAqFOwpqDjbhKTKsAXNxtBOXb7Ot2eKoDaDFckJGr2shAXRchclUS6wSixSPwQIPGAUcdO7Cq744Ollng==}
     peerDependencies:
       react: '*'
       styled-components: '*'
@@ -1797,6 +1815,13 @@ packages:
 
   /picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
+
+  /polished@4.3.1:
+    resolution: {integrity: sha512-OBatVyC/N7SCW/FaDHrSd+vn0o5cS855TOmYi4OkdWUMSJCET/xip//ch8xGUvtr3i44X9LVyWwQlRMTN3pwSA==}
+    engines: {node: '>=10'}
+    dependencies:
+      '@babel/runtime': 7.24.0
+    dev: false
 
   /possible-typed-array-names@1.0.0:
     resolution: {integrity: sha512-d7Uw+eZoloe0EHDIYoe+bQ5WXnGMOpmiZFTuMWCwpjzzkL2nTjcKiAk4hh8TjnGye2TwWOk3UXucZ+3rbmBa8Q==}

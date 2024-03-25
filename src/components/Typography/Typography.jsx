@@ -16,10 +16,10 @@ const variantMap = {
   overline: 'span',
 };
 
-const Typography = ({ variant = 'body', color = "text", children, ...props }) => {
+const Typography = ({ variant = 'body', color = "text", gradient, children, ...props }) => {
   const Component = variantMap[variant] || 'span';
   return (
-    <Text as={Component} variant={Component} color={color} {...props}>
+    <Text as={Component} $gradient={gradient} $variant={Component} color={color} {...props}>
       {children}
     </Text>
   );
