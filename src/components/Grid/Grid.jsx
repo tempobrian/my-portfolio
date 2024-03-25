@@ -29,9 +29,25 @@ export const Row = styled.div`
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  width: 100%;
+  justify-content: ${({ align }) => {
+    switch (align) {
+      case 'left':
+        return 'flex-start';
+      case 'center':
+        return 'center';
+      case 'right':
+        return 'flex-end';
+      // Add more cases for additional alignment options like 'space-between', 'space-around', etc.
+      default:
+        return 'flex-start'; // Default alignment is left
+    }
+  }};
+  // For vertical alignment, you could use align-items or align-content here, depending on your layout needs
+  align-items: center;
 `;
 
-export const Column = styled.div`
+export const Col = styled.div`
   flex: 0 0 auto;
   padding-right: 15px;
   padding-left: 15px;
@@ -52,6 +68,19 @@ export const Column = styled.div`
   @media (min-width: 1200px) {
     ${({ xl }) => xl && `width: ${(xl / 12) * 100}%;`}
   }
+   justify-content: ${({ align }) => {
+    switch (align) {
+      case 'left':
+        return 'flex-start';
+      case 'center':
+        return 'center';
+      case 'right':
+        return 'flex-end';
+      // Add more cases for additional alignment options like 'space-between', 'space-around', etc.
+      default:
+        return ''; // Default alignment is left
+    }
+  }};
 `;
 
 
