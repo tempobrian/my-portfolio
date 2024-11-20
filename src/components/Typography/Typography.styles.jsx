@@ -75,5 +75,5 @@ export const Text = styled.span`
       `}
 
 `}
-margin-bottom: ${({ noGutterBottom }) => (noGutterBottom ? '0' : '2rem')};
+margin-bottom: ${({ $noGutterBottom }) => ($noGutterBottom ? '0' : '2rem')};
 `;

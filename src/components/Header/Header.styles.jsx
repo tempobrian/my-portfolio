@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { opacify } from 'polished';
 
 export const HeaderContainer = styled.header`
   background: ${(props) => props.theme.colors.body};
   color: ${(props) => props.theme.colors.text};
-  box-shadow: inset 0 0 1px ${(props) => props.theme.colors.secondary};
+  border-bottom: thin solid ${(props) => opacify(-0.8, props.theme.colors.secondary)};
   padding: 20px 0;
 `;
 

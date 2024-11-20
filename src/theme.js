@@ -15,9 +15,7 @@ export const lightTheme = {
     text: '#101418', // Dark text
     primary: '#007fff', // Accent color for buttons and icons
     secondary: '#303740', // Secondary color for miscellaneous elements
-    accent: '#9C27B0', // For hover states and accents
     buttonText: '#FFFFFF',
-    accentHover: '#BA68C8', // A lighter purple for hover states on accents
     itemBackground: '#EEEEEE', // Background for portfolio items or cards
     boxShadow: '#e5eaf2',
   },
@@ -32,9 +30,7 @@ export const darkTheme = {
     text: '#E8E8E8', // Light text
     primary: '#007fff', // Accent color for buttons and icons
     secondary: '#aebacb', // Secondary color for miscellaneous elements
-    accent: '#4CAF50', // For hover states and accents
     buttonText: '#FFFFFF', // White text on buttons for readability
-    accentHover: '#66BB6A', // A lighter green for hover states on accents
     itemBackground: '#333333', // Background for portfolio items or cards
     boxShadow: '#1f262e',
 

@@ -9,8 +9,8 @@ import { Wrapper } from '../../components/Wrapper/Wrapper';
 const Work = () => {
   // This data would typically come from a CMS or API call
   const portfolioItems = [
-    { id: 1, title: 'Jammming', image: Jammming, description: 'Create playlists using Spotify API.' },
-    { id: 2, title: 'OMG Kawaii', image: omgkawaii, description: 'Our passion to make people smile provides us the motivation and the determination to rise this amazing plushies to a high level of quality with a customer’s satisfaction as our main goal!' },
+    { id: 1, title: 'OMG Kawaii', image: omgkawaii, description: 'Our passion to make people smile provides us the motivation and the determination to rise this amazing plushies to a high level of quality with a customer’s satisfaction as our main goal!' },
+    { id: 2, title: 'Jammming', image: Jammming, description: 'Create playlists using Spotify API.' }
     // Add more projects as needed
   ];
 
@@ -18,7 +18,9 @@ const Work = () => {
     <>
       <Wrapper>
         <Container>
-          <Typography variant="h1" color="primary" gradient="true">My Work</Typography>
+          <Col align="center">
+            <Typography variant="h1" color="primary" gradient="true">My Work</Typography>
+          </Col>
         </Container>
       </Wrapper>
       {

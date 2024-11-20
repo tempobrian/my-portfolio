@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { darken, lighten } from 'polished';
+import { darken, lighten, opacify } from 'polished';
 
 
 export const Wrapper = styled.section`
-  border-bottom: thin solid ${(props) => props.theme.colors.boxShadow};
+  border-bottom: thin solid ${(props) => opacify(-0.8, props.theme.colors.secondary)};
   background: ${(props) =>
     props.$gradient
       ? `linear-gradient(180deg, ${props.theme.colors.body
